@@ -7,23 +7,12 @@ class ProductTag extends Model {}
 ProductTag.init(
     {
         // define columns
-
-        // ProductTag
-        // id
-        // Integer
-        // Doesn't allow null values
-        // Set as primary key
-        // Uses auto increment
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-
-        // product_id
-        // Integer
-        // References the product model's id
         product_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -31,10 +20,6 @@ ProductTag.init(
                 key: 'id'
             }
         },
-
-        // tag_id
-        // Integer
-        // References the tag model's id
         tag_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -53,19 +38,3 @@ ProductTag.init(
 );
 
 module.exports = ProductTag;
-
-    // ProductTag
-
-    // id
-    // Integer
-    // Doesn't allow null values
-    // Set as primary key
-    // Uses auto increment
-
-    // product_id
-    // Integer
-    // References the product model's id
-
-    // tag_id
-    // Integer
-    // References the tag model's id
